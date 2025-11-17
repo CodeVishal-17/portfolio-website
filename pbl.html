@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vishal Goyal | Portfolio</title>
+<style>
+    
+    :root {
+        --bg: #05070a;
+        --bg-gradient: radial-gradient(circle at top left, #111827 0%, #05070a 60%);
+        --card: #0d1117;
+        --card-gradient: linear-gradient(145deg, #0d1117, #11161d);
+        --text: #e6edf7;
+        --muted: #94a3b8;
+        --primary: #6aa9ff;
+        --primary-glow: 0 0 18px rgba(106,169,255,0.6);
+        --radius: 16px;
+        --shadow: 0 0 28px rgba(0,0,0,0.4);
+    }
+
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: var(--bg-gradient);
+        color: var(--text);
+        scroll-behavior: smooth;
+    }
+
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.8rem;
+        background: rgba(13,17,23,0.5);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav .logo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background: var(--primary);
+        padding: .5rem .95rem;
+        border-radius: var(--radius);
+        color: #000;
+        box-shadow: var(--primary-glow);
+    }
+
+    nav a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: var(--primary);
+    }
+
+    nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: 0.3s;
+    }
+    nav a:hover::after { width: 100%; }
+
+    
+    .hero {
+        text-align: center;
+        padding: 5rem 1rem;
+        animation: fadeIn 1.2s ease;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin: 0;
+        text-shadow: 0 0 6px rgba(255,255,255,0.1);
+    }
+
+    .hero p {
+        color: var(--muted);
+        margin-top: .7rem;
+        font-size: 1.2rem;
+    }
+
+    
+    section {
+        width: 92%;
+        max-width: 950px;
+        margin: 2.5rem auto;
+        background: var(--card-gradient);
+        padding: 2rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        animation: slideUp 0.9s ease;
+        border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    h2 { margin-top: 0; font-size: 1.7rem; }
+
+    
+    .project-card {
+        border: 1px solid rgba(255,255,255,0.08);
+        padding: 1.2rem;
+        border-radius: var(--radius);
+        margin-bottom: 1.2rem;
+        transition: 0.3s;
+        background: linear-gradient(145deg, #0f141b, #0a0d10);
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+
+    .project-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: var(--primary-glow);
+    }
+
+    
+    a { color: var(--primary); }
+
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    
+    @media (max-width: 700px) {
+        nav { flex-direction: column; gap: 0.6rem; }
+        nav a { margin-left: 0.8rem; }
+        .hero h1 { font-size: 2.3rem; }
+        section { padding: 1.4rem; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">VG</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div id="home" class="hero">
+    <h1>Hi, I'm Vishal Goyal</h1>
+    <p>Aspiring Developer • Engineering Student</p>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I'm Vishal, an engineering student passionate about coding, logic-building, and improving everyday.
+        I love clean, simple, responsive designs using HTML and CSS fundamentals. I'm consistent,
+        fast-learning, and dedicated to improving my technical skills.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio using HTML & CSS only. Includes animations and modern UI.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Python Automations</h3>
+        <p>Basic automation scripts exploring loops, file handling, and functions.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>C Practice Programs</h3>
+        <p>Mini programs such as calculators, arrays, and pattern printing.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>Python</li>
+        <li>C Programming</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>
+        <strong>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                <path d="M19 0h-14C2.7 0 1 1.7 1 3.8v16.4C1 22.3 2.7 24 4.9 24h14.1C21.3 24 23 22.3 23 20.2V3.8C23 1.7 21.3 0 19 0zM7.1 20.5H3.6V9h3.5v11.5zM5.3 7.6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20.5 20.5h-3.5V14c0-1.6-.6-2.7-2.2-2.7-1.2 0-1.9.8-2.2 1.6-.1.4-.1 1-.1 1.6v5.9h-3.5V9h3.4v1.6h.1c.5-.9 1.6-2.2 3.9-2.2 2.8 0 4.9 1.8 4.9 5.7v6.4z" fill="#0A66C2"/>
+            </svg>
+        </strong>
+        <a href="https://www.linkedin.com/jobs/" target="_blank">LinkedIn</a>
+    </p>
+
+    <p>
+        <strong>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55v-2.03c-3.2.7-3.88-1.38-3.88-1.38-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.26.72-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.41-5.28 5.69.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z" fill="#58a6ff"/>
+            </svg>
+        </strong>
+        <a href="https://github.com/CodeVishal-17" target="_blank">GitHub</a>
+    </p>
+
+    <p>
+        <strong>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                <path d="M12 2.2l8 4.6v9.2l-8 4.6-8-4.6V6.8l8-4.6z" fill="#2EC866"/>
+            </svg>
+        </strong>
+        <a href="https://www.hackerrank.com/profile/vishal_goyal7711" target="_blank">HackerRank</a>
+    </p>
+
+    <p>
+        <strong>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm9 3h-9A2.5 2.5 0 0 0 5 7.5v9A2.5 2.5 0 0 0 7.5 19h9A2.5 2.5 0 0 0 19 16.5v-9A2.5 2.5 0 0 0 16.5 5Zm-4.5 3.3A3.2 3.2 0 1 1 8.8 11.5 3.2 3.2 0 0 1 12 8.3Zm0 8.9a5.9 5.9 0 0 1-4.8-2.4.7.7 0 0 1 .6-1.1h8.4a.7.7 0 0 1 .6 1.1A5.9 5.9 0 0 1 12 17.2ZM17 8a1.1 1.1 0 1 1-1.1-1.1A1.1 1.1 0 0 1 17 8Z" fill="#e1306c"/>
+            </svg>
+        </strong>
+        <a href="https://www.instagram.com/imvishal_17/" target="_blank">Instagram</a>
+    </p>
+
+    <p>Email: <a href="mailto:vishal.goyal.1709@gmail.com">vishal.goyal.1709@gmail.com</a></p>
+    <p>Mobile: 9691747036</p>
+</section>
+
+<footer>
+    © 2025 Vishal Goyal. All Rights Reserved.
+</footer>
+
+</body>
+</html>
